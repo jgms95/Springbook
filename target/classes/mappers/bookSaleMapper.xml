@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="b.k.s">
+
+   <select id="getIno" resultType="Integer">
+      <![CDATA[select max(ino) from item]]>
+   </select>
+
+   <insert id="insert">
+      <![CDATA[insert into item (ino,ititle,iwriter,publishDay,publisher,cataCode,filename,content,price,percent)
+      values (#{ino}, #{ititle}, #{iwriter}, #{publishDay}, #{publisher}, #{cataCode}, #{filename}, #{content}, #{price},#{percent})]]>
+   </insert>
+   
+   
+   <delete id="delete">
+      delete from item where ino = #{ino}
+   </delete>
+   
+   
+
+   <select id="list" resultType="ItemDTO">
+      <![CDATA[select * from item order by ino desc]]>
+   </select>
+   
+</mapper>
