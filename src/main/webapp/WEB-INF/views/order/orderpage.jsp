@@ -17,7 +17,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-첫번째 커밋 페이지 입니다
-두번째 커밋 입니다
+
 </body>
 </html>
