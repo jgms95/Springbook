@@ -40,8 +40,8 @@
 				</tr>
 				<tr class="dot_line">
 					<td class="fixed">판매가</td>
-					<td class="active"><span >
-					   <fmt:formatNumber  value="${item.price*0.9}" type="number" var="discounted_price" />
+					<td class="active"><span>
+					   <fmt:formatNumber  value="${item.price*0.9}" type="number" var="discounted_price"/>
 				         ${discounted_price}원(10%할인)</span></td>
 				</tr>
 				<tr>
@@ -86,10 +86,10 @@
 					<td class="fixed">
 			      <select style="width: 60px;" id="order_goods_qty">
 				      <option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
+					  <option>2</option>
+					  <option>3</option>
+					  <option>4</option>
+					  <option>5</option>
 			     </select>
 						 </td>
 					</tr>
