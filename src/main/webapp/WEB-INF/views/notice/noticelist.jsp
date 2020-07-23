@@ -26,6 +26,9 @@
 	text-align: center;
 	}
 	
+	.page-link {
+ 	 color: rgb(90,56,37);
+	}
 	
 	.pagination>li.active>a {
  	 background-color: rgb(90,56,37) !important;
@@ -106,7 +109,7 @@
 			<strong>글 작성</strong>
 		</a>
 		
-	
+	${login.id}
 		
 	</div> <!-- class = container -->
 	
