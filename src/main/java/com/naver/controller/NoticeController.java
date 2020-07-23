@@ -26,6 +26,7 @@ public class NoticeController {
 	@Autowired
 	private NoticeService nService;
 	
+	
 
 	@RequestMapping(value="/noticelist/{curPage}",method=RequestMethod.GET)
 	public String noticelist(Model model, @PathVariable("curPage") String curPage) {
