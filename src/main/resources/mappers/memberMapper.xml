@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="m.e.m">
+
+
+	<insert id="insert">
+		insert into member (id,pw,name,age,rrNum1, rrNum2, phoneNum, userAddr1,userAddr2,userAddr3)
+		values (#{id},#{pw},#{name},#{age},#{rrNum1},#{rrNum2},
+		#{phoneNum},#{userAddr1},#{userAddr2},#{userAddr3})
+	</insert>
+
+	<select id="list" resultType="MemberDTO">
+		select * from member
+	</select>
+	
+	<select id="read" resultType="MemberDTO">
+		select * from member where id = #{id}
+	</select>
+	
+	<select id="updateui" resultType="MemberDTO">
+		select * from member where id = #{id}
+	</select>
+	
+	<update id="update">
+	update member set name = #{name}, age = #{age} where id=#{id}
+	</update>
+	
+	<delete id="delete">
+	delete from member where id = #{id}
+	</delete>
+	
+	<select id="loginpost" resultType="MemberDTO">
+		select * from member where id = #{id} and pw = #{pw}
+	</select>
+	
+	<select id="checkId" resultType="int">
+		select count(*) from member where id = #{id}
+	</select>
+	
+	<select id="findId" resultType="MemberDTO">
+		select * from member where name = #{name} and phoneNum = #{phoneNum}
+	</select>
+	
+	<select id="findPw" resultType="MemberDTO">
+		select * from member where id = #{id} and name = #{name} and rrNum1 = #{rrNum1} and rrNum2 = #{rrNum2}
+	</select>
+	
+</mapper>
