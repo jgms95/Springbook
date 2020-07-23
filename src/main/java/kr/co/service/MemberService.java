@@ -16,4 +16,8 @@ public interface MemberService {
 
 	MemberDTO findPw(MemberDTO dto);
 
+	String findAuthority(String id);
+
+	MemberDTO readId(String id);
+
 }

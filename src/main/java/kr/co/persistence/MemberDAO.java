@@ -15,4 +15,8 @@ public interface MemberDAO {
 
 	MemberDTO findPw(MemberDTO dto);
 
+	String findAuthority(String id);
+
+	MemberDTO readId(String id);
+
 }

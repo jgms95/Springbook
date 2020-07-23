@@ -38,4 +38,16 @@ public class MemberServiceImpl implements MemberService {
 	public MemberDTO findPw(MemberDTO dto) {
 		return memberDao.findPw(dto);
 	}
+
+
+	@Override
+	public String findAuthority(String id) {
+		return memberDao.findAuthority(id);
+	}
+
+
+	@Override
+	public MemberDTO readId(String id) {
+		return memberDao.readId(id);
+	}
 }

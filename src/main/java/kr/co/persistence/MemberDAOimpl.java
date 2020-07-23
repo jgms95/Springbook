@@ -40,6 +40,16 @@ public class MemberDAOimpl implements MemberDAO{
 		return session.selectOne(NS+".findPw",dto);
 	}
 
+	@Override
+	public String findAuthority(String id) {
+		return session.selectOne(NS+".findAuthority",id);
+	}
+
+	@Override
+	public MemberDTO readId(String id) {
+		return session.selectOne(NS+".readId",id);
+	}
+
 	
 
 }

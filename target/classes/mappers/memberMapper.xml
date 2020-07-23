@@ -11,25 +11,11 @@
 		#{phoneNum},#{userAddr1},#{userAddr2},#{userAddr3},#{email})
 	</insert>
 
-	<select id="list" resultType="MemberDTO">
-		select * from member
-	</select>
 	
-	<select id="read" resultType="MemberDTO">
+	<select id="readId" resultType="MemberDTO">
 		select * from member where id = #{id}
 	</select>
 	
-	<select id="updateui" resultType="MemberDTO">
-		select * from member where id = #{id}
-	</select>
-	
-	<update id="update">
-	update member set name = #{name}, age = #{age} where id=#{id}
-	</update>
-	
-	<delete id="delete">
-	delete from member where id = #{id}
-	</delete>
 	
 	<select id="loginpost" resultType="MemberDTO">
 		select * from member where id = #{id} and pw = #{pw}
@@ -45,6 +31,10 @@
 	
 	<select id="findPw" resultType="MemberDTO">
 		select * from member where id = #{id} and name = #{name} and rrNum1 = #{rrNum1} and email = #{email}
+	</select>
+	
+	<select id="findAuthority" resultType="string">
+		select authority from member where id = #{id}
 	</select>
 	
 </mapper>

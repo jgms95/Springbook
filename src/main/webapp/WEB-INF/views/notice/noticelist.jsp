@@ -78,12 +78,12 @@
 		
 		<ul class="pagination justify-content-center">
 			<li class="page-item ${to.curPage == 1 ? 'disabled' : '' }"><a class="page-link"
-					href="/notice/noticelist/${to.curPage>1?to.curPage-1:1}">&laquo;</a></li>
+					href="/notice/noticelist/${to.curPage>1?to.curPage-1:1}?id=${login.id}">&laquo;</a></li>
 			<c:forEach begin="${to.beginPageNum }" end="${to.stopPageNum }" var="page">
-				<li class="page-item ${to.curPage == page ? 'active' : '' }"><a class="page-link" href="/notice/noticelist/${page}">${page}</a></li>
+				<li class="page-item ${to.curPage == page ? 'active' : '' }"><a class="page-link" href="/notice/noticelist/${page}?id=${login.id}">${page}</a></li>
 			</c:forEach>
 			<li class="page-item ${to.curPage == to.totalPage ? 'disabled' : '' }"><a class="page-link"
-					href="/notice/noticelist/${to.curPage<to.totalPage?to.curPage+1:to.curPage}">&raquo;</a></li>
+					href="/notice/noticelist/${to.curPage<to.totalPage?to.curPage+1:to.curPage}?id=${login.id}">&raquo;</a></li>
 		</ul>
 		
 		
@@ -94,22 +94,22 @@
 		
 		<nav class="navbar navbar-expand-sm bg-light navbar-dark">
 			<form class="form-inline " name='sform' method='get' action='#'>
+			<input type="hidden" name="id" value="${login.id}">
 				<aside>
 						<button type="button" class="btn btn-dark" disabled>글제목</button>
 					 <input class="form-control mr-sm-2" type="text" name='search'>
 					<button class="btn btn-success" type='submit'>검색</button>
 				</aside>
-
 			</form>
-
 		</nav>
 
 		<br>
-		<a style="position: relative; left: 90%" href="#" class="btn btn-secondary">
+		<c:if test="${authority > 0}">
+		<a style="position: relative; left: 90%" href="/notice/insert" class="btn btn-secondary">
 			<strong>글 작성</strong>
 		</a>
+		</c:if>
 		
-	${login.id}
 		
 	</div> <!-- class = container -->
 	
