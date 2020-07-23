@@ -1,0 +1,16 @@
+#예외처리
+
+#깃 설파일
+*/.git/*
+
+*/target/*
+
+.classpath
+
+.deployables
+
+.git
+
+.project
+
+.settings
